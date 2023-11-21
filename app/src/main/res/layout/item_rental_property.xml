@@ -1,0 +1,44 @@
+<!-- res/layout/item_rental_property.xml -->
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+        <variable
+            name="property"
+            type="com.example.project.RentalProperty" />
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <TextView
+            android:id="@+id/propertyType"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@{property.propertyType}"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            tools:text="Condo" />
+
+        <TextView
+            android:id="@+id/propertyAddress"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@{property.address}"
+            android:textSize="16sp"
+            tools:text="123 Main St" />
+
+        <TextView
+            android:id="@+id/propertyAvailability"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@{property.isAvailable ? @string/available : @string/not_available}"
+            android:textColor="@color/material_dynamic_primary0"
+            android:textSize="14sp"
+            tools:text="Available" />
+    </LinearLayout>
+</layout>
