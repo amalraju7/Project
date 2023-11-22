@@ -24,6 +24,8 @@
         <activity android:name=".RentalDetailsActivity">
 
         </activity>
+        <activity android:name=".LoginActivity"></activity>
+        <activity android:name=".AddPropertyActivity"></activity>
     </application>
 
 </manifest>
